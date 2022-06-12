@@ -6,7 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.covidstatistics.coronavirusstatistics.component.Covid19Stats;
 
 @Repository
-
-public interface Covid19StatsRepository extends CrudRepository<Covid19Stats, Integer>{
+public interface Covid19StatsRepository extends CrudRepository<Covid19Stats, Integer> {
 
 }
