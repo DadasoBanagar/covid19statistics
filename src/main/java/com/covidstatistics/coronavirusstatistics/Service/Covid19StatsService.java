@@ -26,7 +26,7 @@ public class Covid19StatsService implements ICovid19StatsPaginationService{
 
 	@Autowired
 	ICovid19StatsRepository covid19StatsRepository;
-	
+
 	@Autowired
 	ICovid19StatsPaginationRepository iCovid19StatsPaginationRepository;
 
@@ -75,5 +75,5 @@ public class Covid19StatsService implements ICovid19StatsPaginationService{
 		return pageResult.toList();
 	}
 
-	
+
 }

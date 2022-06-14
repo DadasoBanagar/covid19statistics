@@ -25,35 +25,31 @@ public class CoronaVirusStattisticsController {
 	static Covid19Stats covid19Stats;
 
 	@Autowired
-	static Covid19StatsService covid19StatsService;
+	Covid19StatsService covid19StatsService;
 
 	@GetMapping("/covid19GetUSAUpdate")
-	private static ResponseEntity<String> fetchCovid19USAStats() {
-		covid19StatsService = new Covid19StatsService();
+	private ResponseEntity<String> fetchCovid19USAStats() {
 		ResponseEntity<String> responsedata = covid19StatsService.fetchCovid19USAStats();
 		return responsedata;
 	}
 
 	@GetMapping("/covid19AllCountrystatsUpdate")
-	private static ResponseEntity<String> fetchAllCountryStatsUpdate() {
-		covid19StatsService = new Covid19StatsService();
+	private ResponseEntity<String> fetchAllCountryStatsUpdate() {
 		ResponseEntity<String> responsedata = covid19StatsService.fetchAllCountryStatsUpdate();
 
 		return responsedata;
 	}
 
 	@GetMapping("/covid19StatisticsPagination/{pageNo}/{pageSize}")
-	private static List<Covid19Stats> getCovid19StatsPagination(@PathVariable int pageNo, @PathVariable int pageSize) {
-		covid19StatsService = new Covid19StatsService();
+	private List<Covid19Stats> getCovid19StatsPagination(@PathVariable int pageNo, @PathVariable int pageSize) {
 		return covid19StatsService.findPaginated(pageNo, pageSize);
 
 	}
 
 	@PostMapping("/saveCovid19AllCountrystats")
-	private static String saveAllCountryStatsUpdate(@RequestBody Covid19Stats covid19Stats)
+	private String saveAllCountryStatsUpdate(@RequestBody Covid19Stats covid19Stats)
 			throws JsonMappingException, JsonProcessingException {
 
-		covid19StatsService = new Covid19StatsService();
 		String responsedata = covid19StatsService.saveCovid19AllCountryStatsUpdate(covid19Stats);
 
 		return responsedata;

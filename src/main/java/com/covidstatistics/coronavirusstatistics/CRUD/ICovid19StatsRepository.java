@@ -1,11 +1,11 @@
 package com.covidstatistics.coronavirusstatistics.CRUD;
 
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import com.covidstatistics.coronavirusstatistics.component.Covid19Stats;
 
-@Repository
+@Service
 public interface ICovid19StatsRepository extends CrudRepository<Covid19Stats, Integer> {
 
 }

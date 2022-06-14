@@ -1,10 +1,10 @@
 package com.covidstatistics.coronavirusstatistics.CRUD;
 
 import org.springframework.data.repository.PagingAndSortingRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import com.covidstatistics.coronavirusstatistics.component.Covid19Stats;
-@Repository
+@Service
 public interface ICovid19StatsPaginationRepository extends PagingAndSortingRepository<Covid19Stats, Integer> {
 
 }
