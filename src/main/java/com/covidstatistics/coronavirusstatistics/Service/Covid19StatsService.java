@@ -1,13 +1,11 @@
 package com.covidstatistics.coronavirusstatistics.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -16,10 +14,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import com.covidstatistics.coronavirusstatistics.CRUD.ICovid19StatsPaginationRepository;
-import com.covidstatistics.coronavirusstatistics.CRUD.ICovid19StatsRepository;
-import com.covidstatistics.coronavirusstatistics.component.Covid19Stats;
 import com.covidstatistics.coronavirusstatistics.constant.Covid19RestConstant;
+import com.covidstatistics.coronavirusstatistics.entity.Covid19Stats;
+import com.covidstatistics.coronavirusstatistics.repo.ICovid19StatsPaginationRepository;
+import com.covidstatistics.coronavirusstatistics.repo.ICovid19StatsRepository;
 
 @Service
 public class Covid19StatsService implements ICovid19StatsPaginationService{

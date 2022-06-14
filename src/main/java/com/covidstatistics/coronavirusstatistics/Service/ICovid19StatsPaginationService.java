@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.covidstatistics.coronavirusstatistics.component.Covid19Stats;
+import com.covidstatistics.coronavirusstatistics.entity.Covid19Stats;
 
 @Service
 public interface ICovid19StatsPaginationService {

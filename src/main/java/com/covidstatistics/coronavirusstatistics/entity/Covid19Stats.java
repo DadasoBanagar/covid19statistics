@@ -1,4 +1,4 @@
-package com.covidstatistics.coronavirusstatistics.component;
+package com.covidstatistics.coronavirusstatistics.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

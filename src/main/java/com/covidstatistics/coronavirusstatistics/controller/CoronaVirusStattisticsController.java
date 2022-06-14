@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import com.covidstatistics.coronavirusstatistics.Service.Covid19StatsService;
-import com.covidstatistics.coronavirusstatistics.component.Covid19Stats;
+import com.covidstatistics.coronavirusstatistics.entity.Covid19Stats;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 
