@@ -19,8 +19,9 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 @RestController
 public class CoronaVirusStattisticsController {
 
-	static RestTemplate restTemplate = new RestTemplate();
-
+	@Autowired
+	static RestTemplate restTemplate;
+	
 	@Autowired
 	static Covid19Stats covid19Stats;
 

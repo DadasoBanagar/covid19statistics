@@ -36,11 +36,11 @@ public class Covid19StatsService implements ICovid19StatsPaginationService{
 	public ResponseEntity<String> fetchCovid19USAStats() {
 		HttpHeaders header = new HttpHeaders();
 		header.setContentType(MediaType.APPLICATION_JSON);
-		header.add(Covid19RestConstant.getHost, Covid19RestConstant.getAPIHostValue);
-		header.add(Covid19RestConstant.getKey, Covid19RestConstant.getAPIKeyValue);
+		header.add(Covid19RestConstant.host, Covid19RestConstant.apiHostValue);
+		header.add(Covid19RestConstant.apiKey, Covid19RestConstant.apiKeyValue);
 		HttpEntity<String> httpEntity = new HttpEntity<>("parameters", header);
 
-		ResponseEntity<String> response = restTemplate.exchange(Covid19RestConstant.getCovid19USAUrl, HttpMethod.GET,
+		ResponseEntity<String> response = restTemplate.exchange(Covid19RestConstant.covid19USAUrl, HttpMethod.GET,
 				httpEntity, String.class);
 
 		return response;
@@ -49,11 +49,11 @@ public class Covid19StatsService implements ICovid19StatsPaginationService{
 	public ResponseEntity<String> fetchAllCountryStatsUpdate() {
 		HttpHeaders header = new HttpHeaders();
 		header.setContentType(MediaType.APPLICATION_JSON);
-		header.add(Covid19RestConstant.getHost, Covid19RestConstant.getAPIHostValue);
-		header.add(Covid19RestConstant.getKey, Covid19RestConstant.getAPIKeyValue);
+		header.add(Covid19RestConstant.host, Covid19RestConstant.apiHostValue);
+		header.add(Covid19RestConstant.apiKey, Covid19RestConstant.apiKeyValue);
 		HttpEntity<String> httpEntity = new HttpEntity<>("parameters", header);
 
-		ResponseEntity<String> response = restTemplate.exchange(Covid19RestConstant.getCovid19AllCountryStatsUrl,
+		ResponseEntity<String> response = restTemplate.exchange(Covid19RestConstant.covid19AllCountryStatsUrl,
 				HttpMethod.GET, httpEntity, String.class);
 
 		return response;
